@@ -1,0 +1,17 @@
+<!-- app/views/main/index.html.erb -->
+<h1>Jolines</h1>
+
+<%= button_to "Show Books", main_books_path, method: :get, remote: true %>
+
+
+<%= button_to "Show Stores", main_stores_path, method: :get, remote: true %>
+
+
+<div id="books">
+    <h2>Books Available in Store 1</h2>
+    <ul>
+    <% @Books.each do |Book| %>
+        <li><%= Book.Title %></li>
+    <% end %>
+</ul>
+</div>
