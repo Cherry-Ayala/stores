@@ -1,0 +1,8 @@
+<!-- app/views/sessions/books.html.erb -->
+<h1>Books Available in Store 1</h1>
+<ul>
+<% @books.each do |book| %>
+    <li><%= Book.Title %></li>
+<% end %>
+</ul>
+<%= link_to "Back to Main", root_path %>
