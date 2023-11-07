@@ -1,8 +1,14 @@
-<!-- app/views/sessions/books.html.erb -->
-<h1>Books Available in Store 1</h1>
-<ul>
-<% @books.each do |book| %>
-    <li><%= Book.Title %></li>
+<!-- app/views/sessions/stores_books.html.erb -->
+<h1>Stores and Books</h1>
+
+<% @stores.each do |store| %>
+  <h2><%= store.name %></h2>
+  <ul>
+    <% store.books.each do |book| %>
+      <li><%= book.title %></li>
+    <% end %>
+  </ul>
 <% end %>
-</ul>
+
 <%= link_to "Back to Main", root_path %>
+
